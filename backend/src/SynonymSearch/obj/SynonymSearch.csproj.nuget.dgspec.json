@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/jimmi/2024/dotnet-synonym-search/backend/SynonymSearch/SynonymSearch.csproj": {}
+    "/home/jimmi/2024/dotnet-synonym-search/backend/src/SynonymSearch/SynonymSearch.csproj": {}
   },
   "projects": {
-    "/home/jimmi/2024/dotnet-synonym-search/backend/SynonymSearch/SynonymSearch.csproj": {
+    "/home/jimmi/2024/dotnet-synonym-search/backend/src/SynonymSearch/SynonymSearch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jimmi/2024/dotnet-synonym-search/backend/SynonymSearch/SynonymSearch.csproj",
+        "projectUniqueName": "/home/jimmi/2024/dotnet-synonym-search/backend/src/SynonymSearch/SynonymSearch.csproj",
         "projectName": "SynonymSearch",
-        "projectPath": "/home/jimmi/2024/dotnet-synonym-search/backend/SynonymSearch/SynonymSearch.csproj",
+        "projectPath": "/home/jimmi/2024/dotnet-synonym-search/backend/src/SynonymSearch/SynonymSearch.csproj",
         "packagesPath": "/home/jimmi/.nuget/packages/",
-        "outputPath": "/home/jimmi/2024/dotnet-synonym-search/backend/SynonymSearch/obj/",
+        "outputPath": "/home/jimmi/2024/dotnet-synonym-search/backend/src/SynonymSearch/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/jimmi/.nuget/NuGet/NuGet.Config"

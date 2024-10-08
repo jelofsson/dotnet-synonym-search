@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynonymSearch", "SynonymSearch\SynonymSearch.csproj", "{01C15E4D-7747-4E48-AE7C-0DD62D528FE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynonymSearch", "src\SynonymSearch\SynonymSearch.csproj", "{01C15E4D-7747-4E48-AE7C-0DD62D528FE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{38F29B10-889B-4D25-96B2-82F4DEBB8327}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynonymSearch.Tests", "tests\SynonymSearch.Tests\SynonymSearch.Tests.csproj", "{166A3345-25AF-4E1B-BDE5-761D15AF5DB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +22,12 @@ Global
 		{01C15E4D-7747-4E48-AE7C-0DD62D528FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01C15E4D-7747-4E48-AE7C-0DD62D528FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01C15E4D-7747-4E48-AE7C-0DD62D528FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{166A3345-25AF-4E1B-BDE5-761D15AF5DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{166A3345-25AF-4E1B-BDE5-761D15AF5DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{166A3345-25AF-4E1B-BDE5-761D15AF5DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{166A3345-25AF-4E1B-BDE5-761D15AF5DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{166A3345-25AF-4E1B-BDE5-761D15AF5DB8} = {38F29B10-889B-4D25-96B2-82F4DEBB8327}
 	EndGlobalSection
 EndGlobal
