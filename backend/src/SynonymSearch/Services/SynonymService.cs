@@ -34,17 +34,30 @@ public class SynonymService
     {
         Queue<string> queue = new Queue<string>();
         HashSet<string> visited = new HashSet<string>();
+
+        // Add the starting point (from) to the queue
         queue.Enqueue(from);
 
+        // Perform breadth-first search to find all transitive synonyms
         while (queue.Count > 0)
         {
-            var current = queue.Dequeue();
+            var current = queue.Dequeue();  // Get the next word from the queue
+
+            // Traverse all synonyms of the current word
             foreach (var synonym in synonyms[current])
             {
                 if (!visited.Contains(synonym))
                 {
+                    // Mark the synonym as visited to avoid reprocessing it
                     visited.Add(synonym);
-                    synonyms[to].Add(synonym); // Expand synonym list
+
+                    // Add the synonym to the synonym set of 'to'
+                    synonyms[to].Add(synonym);  
+
+                    // Ensure the synonym of the current word also gets the original 'to' as a synonym to maintain bidirectionality
+                    synonyms[synonym].Add(to);
+
+                    // Continue the BFS by adding this synonym to the queue to explore the rest of its synonyms
                     queue.Enqueue(synonym);
                 }
             }
