@@ -53,6 +53,22 @@ public class SynonymServiceTests
         Assert.Empty(result);  // Should return an empty list for words with no synonyms
     }
 
+
+    [Fact]
+    public void GetSynonyms_ShouldNotReturnItself()
+    {
+        // Arrange
+        var service = new SynonymService();
+
+        // Act
+        service.AddSynonym("A", "B");
+        service.AddSynonym("B", "A");
+        var result = service.GetSynonyms("A");
+
+        // Assert
+        Assert.DoesNotContain("A", result);  // Should not return the word itself as a synonym
+    }
+
     [Fact]
     public void AddSynonym_ShouldHandleMultipleSynonymsForSameWord()
     {

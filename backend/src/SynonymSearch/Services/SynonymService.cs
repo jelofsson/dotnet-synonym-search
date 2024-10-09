@@ -51,6 +51,9 @@ public class SynonymService
                     // Mark the synonym as visited to avoid reprocessing it
                     visited.Add(synonym);
 
+                    if(to == synonym)
+                        continue;  // Skip the synonym that is the destination word
+
                     // Add the synonym to the synonym set of 'to'
                     synonyms[to].Add(synonym);  
 
