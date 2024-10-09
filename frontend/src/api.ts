@@ -1,12 +1,19 @@
-const addSynonym = async (word: string, synonym: string) => {
-  const response = await fetch("http://localhost:3001/synonyms", {
+const addSynonym = async (WordA: string, WordB: string) => {
+  const response = await fetch("https://localhost:7275/api/synonym/add", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ word, synonym }),
+    body: JSON.stringify({ WordA, WordB }),
   });
   return response.json();
 };
 
-export { addSynonym };
+const GetSynonyms = async (word: string) => {
+  const response = await fetch(
+    `https://localhost:7275/api/synonym/lookup?word=${word}`,
+  );
+  return response.json();
+};
+
+export { addSynonym, GetSynonyms };
