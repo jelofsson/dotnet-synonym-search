@@ -1,0 +1,11 @@
+# Vite
+dist/
+node_modules/
+.cache/
+*.log
+.env
+.env.local
+.env.*.local
+.env.*.local
+*.lock
+pnpm-debug.log*
