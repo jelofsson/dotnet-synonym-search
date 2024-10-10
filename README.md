@@ -20,7 +20,9 @@ also I have implemented an algorithm to union and connect the transitive synonym
 
 ## How to run
 
-Frontend is hosted on AWS Amplify and the backend is hosted on AWS EC2.
+Frontend is hosted on AWS Amplify and the backend is hosted on Azure Web App.
+
+[Try out my deploy here 🚀](https://master.d3j75al23adf2c.amplifyapp.com/)
 
 ### Backend
 
