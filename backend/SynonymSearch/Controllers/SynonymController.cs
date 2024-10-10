@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v1/[controller]")]
 public class SynonymController : ControllerBase
 {
     private readonly SynonymService _synonymService;
@@ -12,7 +12,7 @@ public class SynonymController : ControllerBase
         _synonymService = synonymService;
     }
 
-    // POST api/synonym/add - Endpoint to add a pair of synonyms
+    // POST api/v1/synonym/add - Endpoint to add a pair of synonyms
     [HttpPost("add")]
     public IActionResult AddSynonym([FromBody] SynonymRequest request)
     {
@@ -20,8 +20,8 @@ public class SynonymController : ControllerBase
         return Ok(new { message = "Synonyms added successfully!" });
     }
 
-    // GET api/synonym/lookup?word=clean - Endpoint to get a list of synonyms for a word
-    [HttpGet("lookup")]
+    // GET api/v1/synonym?word=clean - Endpoint to get a list of synonyms for a word
+    [HttpGet]
     public IActionResult LookupSynonym([FromQuery] string word)
     {
         var synonyms = _synonymService.GetSynonyms(word);
