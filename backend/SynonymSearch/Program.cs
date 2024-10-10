@@ -26,7 +26,6 @@ var app = builder.Build();
 // Apply the CORS policy
 app.UseCors("AllowAll");
 
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -37,6 +36,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+// Serve static files 
+app.UseStaticFiles();
 
 app.MapControllers();
 
