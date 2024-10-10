@@ -1,3 +1,5 @@
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Retrieve CORS allowed origins from environment variable
@@ -10,31 +12,21 @@ builder.Services.AddSingleton<SynonymService>();
 
 builder.Services.AddControllers();
 
-// Configure CORS if `corsAllowedOrigins` has values
-if (corsAllowedOrigins != null && corsAllowedOrigins.Length > 0)
+// Configure CORS
+builder.Services.AddCors(options =>
 {
-    builder.Services.AddCors(options =>
-    {
-        options.AddPolicy("CorsPolicy", builder =>
-        {
-            builder.WithOrigins(corsAllowedOrigins) // Use the origins from the environment variable
-                   .AllowAnyMethod()
-                   .AllowAnyHeader();
-        });
-    });
-}
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy  =>
+                      {
+                          policy.WithOrigins("https://master.d3j75al23adf2c.amplifyapp.com");
+                      });
+});
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
-// Apply the CORS policy
-if (corsAllowedOrigins != null && corsAllowedOrigins.Length > 0)
-{
-    app.UseCors("CorsPolicy");
-}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -44,6 +36,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthorization();
 
