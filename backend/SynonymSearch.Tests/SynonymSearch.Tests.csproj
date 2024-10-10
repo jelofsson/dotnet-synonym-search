@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\SynonymSearch\SynonymSearch.csproj" />
+    <ProjectReference Include="..\SynonymSearch\SynonymSearch.csproj" />
   </ItemGroup>
 
 </Project>
