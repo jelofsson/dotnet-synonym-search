@@ -1,5 +1,7 @@
+const API_URL = process.env.BACKEND_API_URL;
+
 const addSynonym = async (WordA: string, WordB: string) => {
-  const response = await fetch("https://localhost:7275/api/v1/synonym/add", {
+  const response = await fetch(`${API_URL}/api/v1/synonym/add`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -10,9 +12,7 @@ const addSynonym = async (WordA: string, WordB: string) => {
 };
 
 const GetSynonyms = async (word: string) => {
-  const response = await fetch(
-    `https://localhost:7275/api/v1/synonym?word=${word}`,
-  );
+  const response = await fetch(`${API_URL}/api/v1/synonym?word=${word}`);
   return response.json();
 };
 
