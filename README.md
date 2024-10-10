@@ -20,7 +20,7 @@ also I have implemented an algorithm to union and connect the transitive synonym
 
 ## How to run
 
-Frontend is hosted on github pages and the backend is hosted on AWS EC2.
+Frontend is hosted on AWS Amplify and the backend is hosted on AWS EC2.
 
 ### Backend
 
