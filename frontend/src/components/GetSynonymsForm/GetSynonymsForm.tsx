@@ -53,7 +53,7 @@ const GetSynonymsForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit}>
       <Grid container spacing={1}>
-        <Grid size={7}>
+        <Grid size={{ xs: 12, md: 7 }}>
           <TextField
             error={error}
             fullWidth
@@ -63,7 +63,7 @@ const GetSynonymsForm: React.FC = () => {
             onChange={handleChange(setWord)}
           />
         </Grid>
-        <Grid size={5}>
+        <Grid size={{ xs: 12, md: 5 }}>
           <Button type="submit" variant="contained" color="primary">
             Get Synonyms
           </Button>

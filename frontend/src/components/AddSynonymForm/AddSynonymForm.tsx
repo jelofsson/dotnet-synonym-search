@@ -41,10 +41,15 @@ const AddSynonymForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit}>
       <Grid container spacing={1}>
-        <Grid size={2} container alignItems="center" justifyContent="center">
+        <Grid
+          size={{ xs: 12, md: 2 }}
+          container
+          alignItems="center"
+          justifyContent="center"
+        >
           <div>Add</div>
         </Grid>
-        <Grid size={3}>
+        <Grid size={{ xs: 12, md: 3 }}>
           <TextField
             error={error}
             fullWidth
@@ -54,10 +59,15 @@ const AddSynonymForm: React.FC = () => {
             onChange={handleChange(setWordA)}
           />
         </Grid>
-        <Grid size={2} container alignItems="center" justifyContent="center">
+        <Grid
+          size={{ xs: 12, md: 2 }}
+          container
+          alignItems="center"
+          justifyContent="center"
+        >
           <div>as synonym to</div>
         </Grid>
-        <Grid size={3}>
+        <Grid size={{ xs: 12, md: 3 }}>
           <TextField
             error={error}
             fullWidth
@@ -67,7 +77,7 @@ const AddSynonymForm: React.FC = () => {
             onChange={handleChange(setWordB)}
           />
         </Grid>
-        <Grid size={2}>
+        <Grid size={{ xs: 12, md: 2 }}>
           <Button type="submit" variant="contained" color="primary">
             Submit
           </Button>
