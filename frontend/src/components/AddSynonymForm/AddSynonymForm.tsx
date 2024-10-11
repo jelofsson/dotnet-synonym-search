@@ -40,11 +40,11 @@ const AddSynonymForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <Grid container spacing={2}>
+      <Grid container spacing={1}>
         <Grid size={2} container alignItems="center" justifyContent="center">
           <div>Add</div>
         </Grid>
-        <Grid size={5}>
+        <Grid size={3}>
           <TextField
             error={error}
             fullWidth
@@ -57,7 +57,7 @@ const AddSynonymForm: React.FC = () => {
         <Grid size={2} container alignItems="center" justifyContent="center">
           <div>as synonym to</div>
         </Grid>
-        <Grid size={5}>
+        <Grid size={3}>
           <TextField
             error={error}
             fullWidth
@@ -67,7 +67,7 @@ const AddSynonymForm: React.FC = () => {
             onChange={handleChange(setWordB)}
           />
         </Grid>
-        <Grid size={12}>
+        <Grid size={2}>
           <Button type="submit" variant="contained" color="primary">
             Submit
           </Button>
