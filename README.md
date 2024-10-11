@@ -29,14 +29,14 @@ Frontend is hosted on AWS Amplify and the backend is hosted on Azure Web App.
 To run the backend locally, you can run the following commands:
 
 ```bash
-cd backend/src/SynonymSearch
+cd backend/SynonymSearch
 dotnet run
 ```
 
 To run the tests, you can run the following commands:
 
 ```bash
-cd backend/tests/SynonymSearch.Tests
+cd backend/SynonymSearch.Tests
 dotnet test
 ```
 
