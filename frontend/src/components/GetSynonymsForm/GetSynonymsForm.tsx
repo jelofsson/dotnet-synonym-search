@@ -12,6 +12,7 @@ import {
   TableHead,
   TableRow,
   Paper,
+  Box,
 } from "@mui/material";
 import { GetSynonyms } from "../../api";
 
@@ -69,22 +70,24 @@ const GetSynonymsForm: React.FC = () => {
         </Grid>
       </Grid>
       {!inputChanged && synonyms.length > 0 && (
-        <TableContainer component={Paper}>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell>Synonyms to "{word}"</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {synonyms.map((synonym, index) => (
-                <TableRow key={index}>
-                  <TableCell>{synonym}</TableCell>
+        <Box mt={2}>
+          <TableContainer component={Paper}>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>Synonyms to "{word}" are:</TableCell>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+              </TableHead>
+              <TableBody>
+                {synonyms.map((synonym, index) => (
+                  <TableRow key={index}>
+                    <TableCell>{synonym}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Box>
       )}
       <Snackbar
         open={error || success}
